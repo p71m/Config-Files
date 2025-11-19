@@ -119,8 +119,12 @@
     },
     "clock": {
         "timezone": "Europe/Berlin",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%d.%m.%Y} Uhr"
+	"format": "{:%H:%M Uhr}",
+        //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	//"tooltip-format": "<tt><small>{calendar}</small></tt>",
+        //"format-alt": "{:%d.%m.%Y}"
+	"on-click": "{calendar}",
+	"tooltip-format": "{:%d.%m.%Y}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -154,21 +158,18 @@
         "format-full": "{capacity}% {icon}",
         "format-charging": "{capacity}%  {icon}",
         "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
+        // "format-alt": "{time} {icon}",
+	"format-time": "{H}:{M}",
         // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+	"interval": 1	
     },
     "bluetooth": {
-    	"swap-icon-label": true,
-    	"format": " {status}",
-    	"format-connected": " {device_alias}",
-    	"format-connected-battery": " {device_alias} {device_battery_percentage}%",
-    	"format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
-    	"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-    	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-    	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-    	"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+	"swap-icon-label": true,
+	"format": " {status}",
+	"format-connected": " {device_alias}",
+	"menu": "on-click",
+	"menu-file": "$HOME/.config/waybar/bluetooth_menu.xml"
     }, 
     "power-profiles-daemon": {
       "format": "{icon}",
@@ -229,10 +230,9 @@
 		"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", //Menu file in resources folder
 		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
+			"shutdown": "systemctl poweroff",
+			"reboot": "systemctl reboot",
+			"suspend": "systemctl suspend"
 		}
     }
 }
