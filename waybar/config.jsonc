@@ -16,22 +16,22 @@
     ],
     "modules-right": [
         "mpd",
+	// "tray",
         "idle_inhibitor",
         "disk",
-        "network",
-        "power-profiles-daemon",
         //"cpu",
         //"memory",
         //"temperature",
         //"backlight",
         "keyboard-state",
         //"sway/language",
-	    "bluetooth",
-	    "pulseaudio",
+	"pulseaudio",
+	"bluetooth",
+	"network",
+	"power-profiles-daemon",
+	"battery",
         "clock",
-        "battery",
         //"battery#bat2",
-        //"tray",
         "custom/power"
     ],
     // Modules configuration
@@ -112,10 +112,8 @@
     "tray": {
         "icon-size": 21,
         "spacing": 10,
-        "icons": {
-           "blueman": "bluetooth",
-           "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-         }
+	"show-passive-items": true,
+	"reverse-direction": false,
     },
     "clock": {
         "timezone": "Europe/Berlin",
@@ -148,28 +146,27 @@
        "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
-        "states": {
-            //"good": 75,
-            "warning": 20,
-            "critical": 5
-        },
-        "swap-icon-label": true,
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}%  {icon}",
-        "format-plugged": "{capacity}% ",
-        // "format-alt": "{time} {icon}",
+	"states": {
+	    //"good": 75,
+	    "warning": 20,
+	    "critical": 5
+	},
+	"swap-icon-label": true,
+	"format": "{capacity}% {icon}",
+	"format-full": "{capacity}% {icon}",
+	"format-charging": "{capacity}%  {icon}",
+	"format-plugged": "{capacity}% ",
+	// "format-alt": "{time} {icon}",
 	"format-time": "{H}:{M}",
-        // "format-good": "", // An empty format will hide the module
-        "format-icons": ["", "", "", "", ""],
-	"interval": 1	
+	// "format-good": "", // An empty format will hide the module
+	"format-icons": ["", "", "", "", ""],
+	"interval": 1,
     },
     "bluetooth": {
 	"swap-icon-label": true,
 	"format": " {status}",
 	"format-connected": " {device_alias}",
-	"menu": "on-click",
-	"menu-file": "$HOME/.config/waybar/bluetooth_menu.xml"
+	"on-click": "blueman-manager",
     }, 
     "power-profiles-daemon": {
       "format": "{icon}",
@@ -183,13 +180,14 @@
       }
     },
     "network": {
-    	"swap-icon-label": true,
+    	"swap-icon-label": true, 
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "",
         "tooltip-format": "{ipaddr}/{cidr}",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
+	"on-click": "iwgtk"
         // "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
@@ -197,8 +195,8 @@
         "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
@@ -221,18 +219,18 @@
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        "exec": "$HOME/Dokumente/Config-Files/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
         "format" : " ⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", //Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "systemctl poweroff",
-			"reboot": "systemctl reboot",
-			"suspend": "systemctl suspend"
-		}
+	"tooltip": false,
+	"menu": "on-click",
+	"menu-file": "$HOME/Dokumente/Config-Files/waybar/power_menu.xml", //Menu file in resources folder
+	"menu-actions": {
+		"shutdown": "systemctl poweroff",
+		"reboot": "systemctl reboot",
+		"suspend": "systemctl suspend"
+	}
     }
 }
