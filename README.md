@@ -8,4 +8,7 @@ this all is still a WIP and is nothing special for now, but it is mine and I am 
 - yay -S nvidia-open
 - yay -S xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
 - yay -S blueman
-- yay -S network-manager-applet
+- yay -S iwgtk
+
+## Things you need to activate
+- systemctl enable iwd && systemctl start iwd
