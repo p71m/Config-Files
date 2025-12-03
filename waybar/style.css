@@ -8,7 +8,10 @@
 	--color-primary: #5b5b5b;
 	--color-secondary: #ff0d9b;
 	--color-white: #ffffff;
-	--color-black: #000000;	
+	--color-black: #000000;
+	--color-red: #f53c3c;
+	--color-green: #26A65B;
+	--color-blue: #2980b9;
 */
 
 window#waybar {
@@ -53,12 +56,6 @@ button {
 button:hover {
 	background: inherit;
 	box-shadow: inset 0 -3px #ffffff;
-}
-
-/* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-	background-color: #ff0d9b;
-	color: #5b5b5b
 }
 
 #workspaces button {
@@ -111,41 +108,18 @@ button:hover {
 #idle_inhibitor,
 #power-profiles-daemon,
 #mpd {
-	background-color: #5b5b5b;
+	/*background-color: #5b5b5b;*/
 	padding: 0 10px;
 	color: #ff0d9b;
 }
 
-#battery:hover,
-#bluetooth:hover,
-#custom-media:hover,
-#custom-power:hover,
-#clock:hover,
-#disk:hover,
-#keyboard-state:hover,
-#network:hover,
-#pulseaudio:hover,
-#idle_inhibitor:hover,
-#power-profiles-daemon:hover,
-#mpd:hover 
-{
-	background-color: #ff0d9b;
-	color: #5b5b5b;
-}
-
-#battery.good{
-	background-color: #26A65B;
-	color: #ffffff;
-}
-
 #battery.warning{
-	background-color: #e69138;
-	color: #000000;
+	color: #e69138;
+	border-bottom: 3px solid rgba(100, 114, 125, 0.5);
 }
 
 #battery.charging, #battery.plugged {
-	background-color: #26A65B;
-	color: #ffffff;
+	color: #26A65B;
 }
 
 @keyframes blink {
@@ -167,80 +141,31 @@ button:hover {
 }
 
 #bluetooth{
-	background-color: #5b5b5b;
+	/*background-color: #5b5b5b;*/
 	padding: 0 10px;
-	color: #ff0000;
+	color: #f53c3c;
 }
 
-#bluetooth:hover{
+/*#bluetooth:hover{
 	background-color: #ff0d9b;
-}
+}*/
 
 #bluetooth.connected {
-	background-color: #0000ff;
-	color: #ffffff;
+	color: #2980b9;
 }
 
 #bluetooth.disconnected {
-	background-color: #ff0000;
+	background-color: #f53c3c;
+	border-bottom: 3px solid rgba(100, 114, 125, 0.5);
 	color: #ffffff;
 }
 
 #bluetooth.off {
-	color: #ff0000;
+	color: #f53c3c;
 }
 
 #bluetooth.on{
-	color: #0000ff;
-}
-
-#hyprland-submap {
-	background-color: #64727D;
-	padding: 0 10px;
-	color: #ffffff;
-}
-
-#power-profiles-daemon {
-	padding: 0 10px;
-}
-
-label:focus {
-	background-color: #000000;
-}
-
-#network{
-	background-color: #5b5b5b;
-	padding: 0 10px;
-}
-
-#network:hover{
-	background-color: #ff0d9b;
-}
-
-#network.disconnected {
-	background-color: #f53c3c;
-	color: #ffffff;
-}
-
-#network.disabled {
-	color: #ff0000;
-}
-
-#network.linked {
-	color: #ff0000;
-}
-
-#network.ethernet {
-	color: #0000ff;
-}
-
-#network.wifi {
-	color: #0000ff;
-}
-
-#pulseaudio.muted {
-	background-color: #90b1b1;
-	color: #2a5c45;
+	color: #2980b9;
 }
 
 #custom-media {
@@ -257,6 +182,12 @@ label:focus {
 	background-color: #ffa000;
 }
 
+#hyprland-submap {
+	background-color: #64727D;
+	padding: 0 10px;
+	color: #ffffff;
+}
+
 #idle_inhibitor.activated {
 	background-color: #ff0d9b;
 	color: #5b5b5b;
@@ -265,6 +196,10 @@ label:focus {
 #idle_inhibitor.activated:hover {
 	background-color: #5b5b5b;
 	color: #ff0d9b;
+}
+
+label:focus {
+	background-color: #000000;
 }
 
 #mpd.disconnected {
@@ -277,6 +212,49 @@ label:focus {
 
 #mpd.paused {
 	background-color: #51a37a;
+}
+
+
+#network{
+	/*background-color: #5b5b5b;*/
+	padding: 0 10px;
+}
+
+/*#network:hover{
+	background-color: #ff0d9b;
+}*/
+
+#network.disconnected {
+	background-color: #f53c3c;
+	color: #ffffff;
+}
+
+#network.disabled {
+	color: #f53c3c;
+}
+
+#network.linked {
+	color: #f53c3c;
+}
+
+#network.ethernet {
+	color: #2980b9;
+}
+
+#network.wifi {
+	color: #2980b9;
+}
+
+#power-profiles-daemon.performance{
+	color: #f53c3c;
+}
+
+#power-profiles-daemon.balanced{
+	color: #2980b9;
+}
+
+#power-profiles-daemon.power-saver{
+	color: #26A65B;
 }
 
 #privacy {
@@ -298,4 +276,26 @@ label:focus {
 
 #privacy-item.audio-out {
 	background-color: #0069d4;
+}
+
+/*#pulseaudio.muted {
+	background-color: #90b1b1;
+	color: #2a5c45;
+}*/
+
+#battery:hover,
+#bluetooth:hover,
+#custom-media:hover,
+#custom-power:hover,
+#clock:hover,
+#disk:hover,
+#keyboard-state:hover,
+#network:hover,
+#pulseaudio:hover,
+#idle_inhibitor:hover,
+#power-profiles-daemon:hover,
+#mpd:hover 
+{
+	background-color: #ff0d9b;
+	color: #5b5b5b;
 }

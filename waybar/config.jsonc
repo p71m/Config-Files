@@ -15,7 +15,7 @@
         "hyprland/window"
     ],
     "modules-right": [
-        "mpd",
+        //"mpd",
 	// "tray",
         "idle_inhibitor",
         "disk",
@@ -116,13 +116,29 @@
 	"reverse-direction": false,
     },
     "clock": {
-        "timezone": "Europe/Berlin",
-	"format": "{:%H:%M Uhr}",
-        //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-	//"tooltip-format": "<tt><small>{calendar}</small></tt>",
-        //"format-alt": "{:%d.%m.%Y}"
-	"on-click": "{calendar}",
-	"tooltip-format": "{:%d.%m.%Y}"
+        "interval": 60,
+        "format": "{:%H:%M}",
+        "tooltip": true,
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "smooth-scrolling-threshold": 10,
+
+        "calendar": {
+            "mode": "month",
+            "on-scroll": 1,
+            "format": {
+                "months":   "<span color='#ffead3'><b>{}</b></span>",
+                "days":     "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks":    "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                // highlight today (bold + underline)
+                "today":    "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click": "shift_up",
+            "on-click-right": "shift_down",
+            "on-click-middle": "shift_reset"
+        }
     },
     "cpu": {
         "format": "{usage}% ",
@@ -164,7 +180,8 @@
     },
     "bluetooth": {
 	"swap-icon-label": true,
-	"format": "",
+	"format": " ({status})",
+	"tooltip-format": "{device_enumerate}",
 	"on-click": "blueman-manager",
     }, 
     "power-profiles-daemon": {
@@ -174,17 +191,17 @@
       "format-icons": {
         "default": "",
         "performance": "",
-        "balanced": "",
-        "power-saver": ""
+        "balanced": " ",
+        "power-saver": " "
       }
     },
     "network": {
     	"swap-icon-label": true, 
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "",
+        "format-ethernet": "",
         "tooltip-format": "{ipaddr}/{cidr}",
-        "format-linked": "{ifname} (No IP) ",
+        "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "⚠",
 	"on-click": "iwgtk"
         // "format-alt": "{ifname}: {ipaddr}/{cidr}"
@@ -197,14 +214,14 @@
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
         "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format-source-muted": "",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
             "phone": "",
             "portable": "",
-            "car": "",
+            "car": " ",
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
