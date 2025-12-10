@@ -1,6 +1,14 @@
 * {
 	/* `otf-font-awesome is required to be installed for icons */
-	font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+	font-family: 
+		"Symbols Nerd Font Mono",
+		"Material Design Icons", 
+		"Font Awesome 5 Free", 
+		"FontAwesome", 
+		Roboto, 
+		Helvetica, 
+		Arial, 
+		sans-serif;
 	font-size: 13px;
 }
 
@@ -108,14 +116,13 @@ button:hover {
 #idle_inhibitor,
 #power-profiles-daemon,
 #mpd {
-	/*background-color: #5b5b5b;*/
+	background-color: transparent;
 	padding: 0 10px;
 	color: #ff0d9b;
 }
 
 #battery.warning{
 	color: #e69138;
-	border-bottom: 3px solid rgba(100, 114, 125, 0.5);
 }
 
 #battery.charging, #battery.plugged {

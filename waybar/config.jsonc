@@ -141,11 +141,11 @@
         }
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "{usage}% ",
         "tooltip": true
     },
     "memory": {
-        "format": "{}% ",
+        "format": "{}% ",
 		"tooltip": true
     },
     "temperature": {
@@ -154,7 +154,7 @@
         "critical-threshold": 80,
         "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["","","","",""]
     },
     "backlight": {
        "device": "acpi_video1",
@@ -189,19 +189,19 @@
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
       "tooltip": true,
       "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": " ",
-        "power-saver": " "
+        "default": "󰪥",
+        "performance": "󰠠",
+        "balanced": "󰪥",
+        "power-saver": "󱤅"
       }
     },
     "network": {
     	"swap-icon-label": true, 
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "",
+        "format-ethernet": "󰈀",
         "tooltip-format": "{ipaddr}/{cidr}",
-        "format-linked": "{ifname} (No IP) ",
+        "format-linked": "{ifname} (No IP) 󰈀",
         "format-disconnected": "⚠",
 	"on-click": "iwgtk"
         // "format-alt": "{ifname}: {ipaddr}/{cidr}"
@@ -211,14 +211,14 @@
         "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-bluetooth-muted": "󰝟 {icon} {format_source}",
+        "format-muted": "󰝟 {format_source}",
         "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format-source-muted": "",
         "format-icons": {
             "headphone": " ",
-            "hands-free": " ",
-            "headset": " ",
+            "hands-free": "󰋎",
+            "headset": "󰋎",
             "phone": "",
             "portable": "",
             "car": " ",
@@ -239,7 +239,7 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
-        "format" : " ⏻ ",
+        "format" : "⏻",
 	"tooltip": false,
 	"menu": "on-click",
 	"menu-file": "$HOME/Dokumente/Config-Files/waybar/power_menu.xml", //Menu file in resources folder
