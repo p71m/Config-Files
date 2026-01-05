@@ -113,7 +113,7 @@
         "icon-size": 21,
         "spacing": 10,
 	"show-passive-items": true,
-	"reverse-direction": false,
+	"reverse-direction": false
     },
     "clock": {
         "interval": 60,
@@ -171,18 +171,18 @@
 	"format": "{capacity}% {icon}",
 	"format-full": "{capacity}% {icon}",
 	"format-charging": "{capacity}%  {icon}",
-	"format-plugged": "{capacity}% ",
+	"format-plugged": "{capacity}% "
 	// "format-alt": "{time} {icon}",
 	"format-time": "{H}:{M}",
 	// "format-good": "", // An empty format will hide the module
 	"format-icons": ["", "", "", "", ""],
-	"interval": 1,
+	"interval": 1
     },
     "bluetooth": {
 	"swap-icon-label": true,
 	"format": " ({status})",
 	"tooltip-format": "{device_enumerate}",
-	"on-click": "blueman-manager",
+	"on-click": "systemsettings kcm_bluetooth"
     }, 
     "power-profiles-daemon": {
       "format": "{icon}",
@@ -203,7 +203,7 @@
         "tooltip-format": "{ipaddr}/{cidr}",
         "format-linked": "{ifname} (No IP) 󰈀",
         "format-disconnected": "⚠",
-	"on-click": "iwgtk"
+	"on-click": "systemsettings kcm_networkmanagement"
         // "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
