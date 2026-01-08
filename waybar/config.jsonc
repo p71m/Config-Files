@@ -23,7 +23,7 @@
         //"memory",
         //"temperature",
         //"backlight",
-        "keyboard-state",
+        //"keyboard-state",
         //"sway/language",
 	"pulseaudio",
 	"bluetooth",
@@ -171,7 +171,7 @@
 	"format": "{capacity}% {icon}",
 	"format-full": "{capacity}% {icon}",
 	"format-charging": "{capacity}%  {icon}",
-	"format-plugged": "{capacity}% "
+	"format-plugged": "{capacity}% ",
 	// "format-alt": "{time} {icon}",
 	"format-time": "{H}:{M}",
 	// "format-good": "", // An empty format will hide the module
@@ -203,7 +203,7 @@
         "tooltip-format": "{ipaddr}/{cidr}",
         "format-linked": "{ifname} (No IP) 󰈀",
         "format-disconnected": "⚠",
-	"on-click": "systemsettings kcm_networkmanagement"
+	"on-click": "nmtui"
         // "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
@@ -246,7 +246,8 @@
 	"menu-actions": {
 		"shutdown": "systemctl poweroff",
 		"reboot": "systemctl reboot",
-		"suspend": "systemctl suspend"
+		"suspend": "systemctl suspend",
+		"exit_session": "hyprctl dispatch exit"
 	}
     }
 }
