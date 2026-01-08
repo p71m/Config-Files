@@ -1,0 +1,316 @@
+-- https://github.com/microsoft/vscode/blob/main/src/vs/base/common/codicons.ts
+-- go to the above and then enter <c-v>u<unicode> and the symbold should appear
+-- or go here and upload the font file: https://mathew-kurian.github.io/CharacterMap/
+-- find more here: https://www.nerdfonts.com/cheat-sheet
+
+return {
+	kind = {
+		Text = "󰦨 ",
+		Method = " ",
+		Function = "󰊕 ",
+		Constructor = " ",
+		Field = " ",
+		Variable = "󰀫",
+		Class = "󰠱 ",
+		Interface = " ",
+		Module = " ",
+		Property = " ",
+		Unit = " ",
+		Value = "󰎠 ",
+		Enum = " ",
+		Keyword = "󰌋 ",
+		Snippet = " ",
+		Color = "󰏘 ",
+		File = " ",
+		Reference = " ",
+		Folder = "󰉋 ",
+		EnumMember = " ",
+		Constant = "󰏿 ",
+		Struct = " ",
+		Event = " ",
+		Operator = " ",
+		TypeParameter = " ",
+		Specifier = " ",
+		Statement = "",
+		Recovery = " ",
+		TranslationUnit = " ",
+		PackExpansion = " ",
+		Copilot = " ",
+		Array = " ",
+		Number = " ",
+		String = " ",
+		Boolean = " ",
+		Object = " ",
+		Template = " ",
+	},
+	type = {
+		Array = " ",
+		Number = " ",
+		String = " ",
+		Boolean = " ",
+		Object = " ",
+		Template = " ",
+	},
+	documents = {
+		File = "",
+		Files = "",
+		Folder = "",
+		OpenFolder = "",
+		EmptyFolder = "",
+		EmptyOpenFolder = "",
+		Unknown = "",
+		Symlink = "",
+		FolderSymlink = "",
+	},
+	git = {
+		Add = " ",
+		Mod = " ",
+		Remove = " ",
+		Untrack = " ",
+		Rename = " ",
+		Diff = " ",
+		Repo = " ",
+		Branch = " ",
+		Unmerged = " ",
+	},
+	ui = {
+		Lock = "",
+		TinyCircle = "",
+		Circle = "",
+		BigCircle = "",
+		BigUnfilledCircle = "",
+		CircleWithGap = "",
+		LogPoint = "",
+		Close = "",
+		NewFile = "",
+		Search = "",
+		Lightbulb = "",
+		Project = "",
+		Dashboard = "",
+		History = "",
+		Comment = "",
+		Bug = "",
+		Code = "",
+		Telescope = " ",
+		Gear = "",
+		Package = "",
+		List = "",
+		SignIn = "",
+		Check = "",
+		Fire = " ",
+		Note = "",
+		BookMark = "",
+		Pencil = " ",
+		-- ChevronRight = "",
+		ChevronRight = ">",
+		Table = "",
+		Calendar = "",
+		Line = "▊",
+		Evil = "",
+		Debug = "",
+		Run = "",
+		VirtualPrefix = "",
+		Next = "",
+		Previous = "",
+	},
+	diagnostics = {
+		Error = " ",
+		Warning = " ",
+		Information = " ",
+		Question = " ",
+		Hint = " ",
+	},
+	misc = {
+		Robot = "󰚩 ",
+		Squirrel = "  ",
+		Tag = " ",
+	},
+}
+-- local M = {}
+--
+-- M.lspkind = {
+--   Namespace = "󰌗",
+--   Text = "󰉿",
+--   Method = "󰆧",
+--   Function = "󰆧",
+--   Constructor = "",
+--   Field = "󰜢",
+--   Variable = "󰀫",
+--   Class = "󰠱",
+--   Interface = "",
+--   Module = "",
+--   Property = "󰜢",
+--   Unit = "󰑭",
+--   Value = "󰎠",
+--   Enum = "",
+--   Keyword = "󰌋",
+--   Snippet = "",
+--   Color = "󰏘",
+--   File = "󰈚",
+--   Reference = "󰈇",
+--   Folder = "󰉋",
+--   EnumMember = "",
+--   Constant = "󰏿",
+--   Struct = "󰙅",
+--   Event = "",
+--   Operator = "󰆕",
+--   TypeParameter = "󰊄",
+--   Table = "",
+--   Object = "󰅩",
+--   Tag = "",
+--   Array = "[]",
+--   Boolean = "",
+--   Number = "",
+--   Null = "󰟢",
+--   String = "󰉿",
+--   Calendar = "",
+--   Watch = "󰥔",
+--   Package = "",
+--   Copilot = "",
+--   Codeium = "",
+--   TabNine = "",
+-- }
+--
+-- M.devicons = {
+--   default_icon = {
+--     icon = "󰈚",
+--     name = "Default",
+--   },
+--
+--   c = {
+--     icon = "",
+--     name = "c",
+--   },
+--
+--   css = {
+--     icon = "",
+--     name = "css",
+--   },
+--
+--   deb = {
+--     icon = "",
+--     name = "deb",
+--   },
+--
+--   Dockerfile = {
+--     icon = "",
+--     name = "Dockerfile",
+--   },
+--
+--   html = {
+--     icon = "",
+--     name = "html",
+--   },
+--
+--   jpeg = {
+--     icon = "󰉏",
+--     name = "jpeg",
+--   },
+--
+--   jpg = {
+--     icon = "󰉏",
+--     name = "jpg",
+--   },
+--
+--   js = {
+--     icon = "󰌞",
+--     name = "js",
+--   },
+--
+--   kt = {
+--     icon = "󱈙",
+--     name = "kt",
+--   },
+--
+--   lock = {
+--     icon = "󰌾",
+--     name = "lock",
+--   },
+--
+--   lua = {
+--     icon = "",
+--     name = "lua",
+--   },
+--
+--   mp3 = {
+--     icon = "󰎆",
+--     name = "mp3",
+--   },
+--
+--   mp4 = {
+--     icon = "",
+--     name = "mp4",
+--   },
+--
+--   out = {
+--     icon = "",
+--     name = "out",
+--   },
+--
+--   png = {
+--     icon = "󰉏",
+--     name = "png",
+--   },
+--
+--   py = {
+--     icon = "",
+--     name = "py",
+--   },
+--
+--   ["robots.txt"] = {
+--     icon = "󰚩",
+--     name = "robots",
+--   },
+--
+--   toml = {
+--     icon = "",
+--     name = "toml",
+--   },
+--
+--   ts = {
+--     icon = "󰛦",
+--     name = "ts",
+--   },
+--
+--   ttf = {
+--     icon = "",
+--     name = "TrueTypeFont",
+--   },
+--
+--   rb = {
+--     icon = "",
+--     name = "rb",
+--   },
+--
+--   rpm = {
+--     icon = "",
+--     name = "rpm",
+--   },
+--
+--   vue = {
+--     icon = "󰡄",
+--     name = "vue",
+--   },
+--
+--   woff = {
+--     icon = "",
+--     name = "WebOpenFontFormat",
+--   },
+--
+--   woff2 = {
+--     icon = "",
+--     name = "WebOpenFontFormat3",
+--   },
+--
+--   xz = {
+--     icon = "",
+--     name = "xz",
+--   },
+--
+--   zip = {
+--     icon = "",
+--     name = "zip",
+--   },
+-- }
+--
+-- return M
