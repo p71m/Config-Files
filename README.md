@@ -1,5 +1,5 @@
-# Hyprland-Config
-My Hyprland Config + Waybar
+# Config-Files
+My Hyprland Config + Waybar + Neovim
 just replace your ~/.config/hypr and ~/.config/waybar with my folders and you should be good to go
 
 this all is still a WIP and is nothing special for now, but it is mine and I am proud of it :)
